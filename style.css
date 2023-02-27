@@ -44,12 +44,12 @@ li a:not(.Active):hover {
     cursor: pointer;
 }
 
-#marisaInfo, #allisonInfo, #mocLeInfo, #SCRAMInfo, #GettyVillaInfo {
+#marisaInfo, #alisonInfo, #mocLeInfo, #SCRAMInfo, #GettyVillaInfo {
     opacity: 0;
     transition: all .5s ease;
 }
 
-#marisaInfo.On, #allisonInfo.On, #mocLeInfo.On, #SCRAMInfo.On, #GettyVillaInfo.On {
+#marisaInfo.On, #alisonInfo.On, #mocLeInfo.On, #SCRAMInfo.On, #GettyVillaInfo.On {
     opacity: 1;
 }
 

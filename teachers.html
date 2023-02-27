@@ -31,13 +31,13 @@
             </div>
         </li>
 
-        <!--Allison-->
+        <!--Alison-->
         <li>
-            <h2 class="TeacherName">Allison Wedding<span class="material-symbols-outlined" id="allisonPlus">add</span><span class="material-symbols-outlined" id="allisonMinus">remove</span></h4>
+            <h2 class="TeacherName">Alison Wedding<span class="material-symbols-outlined" id="alisonPlus">add</span><span class="material-symbols-outlined" id="alisonMinus">remove</span></h4>
 
-            <div id="allisonInfo">
+            <div id="alisonInfo">
                 <p>
-                    Allision was born in Santa Clarita, California.
+                    Alison was born in Santa Clarita, California.
                     Her favorite latin stores are the stories about heroes.
                     Her favorite place in Rome is the Collosseum, and her favorite Roman ruin is Pompeii.
                 </p>
@@ -50,9 +50,9 @@
 
             <div id="mocLeInfo">
                 <p>
-                    Allision was born in Santa Clarita, California.
-                    Her favorite latin stores are the stories about heroes.
-                    Her favorite place in Rome is the Collosseum, and her favorite Roman ruin is Pompeii.
+                    Moc Le was born in Saigon, Vietnam.
+                    Her favorite latin stories are about Aenaes, who founded the first settlements of Rome.
+                    Her favorite place in Rome is Pompeii, and her favorite Roman ruin is the Colosseum.
                 </p>
             </div>
         </li>
@@ -95,29 +95,29 @@
         $("#marisaPlus").show();
     })
 
-    //Allison
+    //Alison
     $( document ).ready(() => {
-        $("#allisonMinus").hide();
+        $("#alisonMinus").hide();
 
-        $("#allisonInfo").hide();
+        $("#alisonInfo").hide();
     });
 
-    $("#allisonPlus").click(() => {
-        $("#allisonInfo").show();
+    $("#alisonPlus").click(() => {
+        $("#alisonInfo").show();
 
-        $("#allisonInfo").toggleClass("On")
-        $("#allisonPlus").hide();
-        $("#allisonMinus").show();
+        $("#alisonInfo").toggleClass("On")
+        $("#alisonPlus").hide();
+        $("#alisonMinus").show();
     })
 
-    $("#allisonMinus").click(() => {
-        $("#allisonInfo").toggleClass("On")
+    $("#alisonMinus").click(() => {
+        $("#alisonInfo").toggleClass("On")
         setTimeout(() => {
-            $("#allisonInfo").hide();
+            $("#alisonInfo").hide();
         }, 250);
 
-        $("#allisonMinus").hide();
-        $("#allisonPlus").show();
+        $("#alisonMinus").hide();
+        $("#alisonPlus").show();
     })
 
     //Moc Le
