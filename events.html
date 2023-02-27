@@ -43,6 +43,23 @@
                 </div>
             </div>
         </li>
+
+        <!--GettyVilla-->
+        <li>
+            <h2 class="EventName">Getty Villa<span class="material-symbols-outlined" id="GettyVillaPlus">add</span><span class="material-symbols-outlined" id="GettyVillaMinus">remove</span></h4>
+
+            <div id="GettyVillaInfo" class="SlideshowContainer">
+                <img src="images/GETTY VILLA/" alt="GettyVilla Image 1" id="GettyVillaSlideshow" class="SlideshowImage">
+
+                <div class="SlideshowLeftArrow" id="GettyVillaLeftArrow">
+                    <i class="fa-solid fa-caret-left fa-6x"></i>
+                </div>
+
+                <div class="SlideshowRightArrow" id="GettyVillaRightArrow">
+                    <i class="fa-solid fa-caret-right fa-6x"></i>
+                </div>
+            </div>
+        </li>
     </ul>
 
 </body>
@@ -74,15 +91,68 @@
         $("#SCRAMPlus").show();
     });
 
-    const imgs = ["IMG_0020.PNG", "IMG_0056 (1).PNG", "IMG_0060 (2).PNG", "IMG_0096.PNG", "IMG_0097.PNG", "IMG_0099.PNG"];
-    let activeImg = 0;
+    const SCRAMImgs = ["IMG_0020.PNG", "IMG_0056 (1).PNG", "IMG_0060 (2).PNG", "IMG_0096.PNG", "IMG_0097.PNG", "IMG_0099.PNG"];
+    let SCRAMActiveImg = 0;
 
-    $("#SCRAMLeftArrow").click(() => {
-        if (imgs.length - 1 != activeImg) {
-            activeImg++;
+    $("#SCRAMRightArrow").click(() => {
+        if (SCRAMImgs.length - 1 != SCRAMActiveImg) {
+            SCRAMActiveImg++;
         } else {
-            activeImg = 0;
+            SCRAMActiveImg = 0;
         }
-        document.getElementById("SCRAMSlideshow").src = imgs[activeImg];
+        document.getElementById("SCRAMSlideshow").src = "images/SCRAM/" + SCRAMImgs[SCRAMActiveImg];
+    })
+    $("#SCRAMLeftArrow").click(() => {
+        if (0 != SCRAMActiveImg) {
+            SCRAMActiveImg--;
+        } else {
+            SCRAMActiveImg = SCRAMImgs.length - 1;
+        }
+        document.getElementById("SCRAMSlideshow").src = "images/SCRAM/" + SCRAMImgs[SCRAMActiveImg];
+    })
+
+    //Getty Villa
+    $( document ).ready(() => {
+        $("#GettyVillaMinus").hide();
+
+        $("#GettyVillaInfo").hide();
+    });
+
+    $("#GettyVillaPlus").click(() => {
+        $("#GettyVillaInfo").show();
+
+        $("#GettyVillaInfo").toggleClass("On")
+        $("#GettyVillaPlus").hide();
+        $("#GettyVillaMinus").show();
+    });
+
+    $("#GettyVillaMinus").click(() => {
+        $("#GettyVillaInfo").toggleClass("On")
+        setTimeout(() => {
+            $("#GettyVillaInfo").hide();
+        }, 250);
+
+        $("#GettyVillaMinus").hide();
+        $("#GettyVillaPlus").show();
+    });
+
+    const GettyVillaImgs = ["IMG_6076.JPG", "IMG_6079.JPG", "IMG_6080.JPG", "IMG_6081.JPG", "IMG_6107.JPG", ];
+    let GettyVillaActiveImg = 0;
+
+    $("#GettyVillaRightArrow").click(() => {
+        if (GettyVillaImgs.length - 1 != GettyVillaActiveImg) {
+            GettyVillaActiveImg++;
+        } else {
+            GettyVillaActiveImg = 0;
+        }
+        document.getElementById("GettyVillaSlideshow").src = "images/GETTY VILLA/" + GettyVillaImgs[GettyVillaActiveImg];
+    })
+    $("#GettyVillaLeftArrow").click(() => {
+        if (0 != GettyVillaActiveImg) {
+            GettyVillaActiveImg--;
+        } else {
+            GettyVillaActiveImg = GettyVillaImgs.length - 1;
+        }
+        document.getElementById("GettyVillaSlideshow").src = "images/GETTY VILLA/" + GettyVillaImgs[GettyVillaActiveImg];
     })
 </script>
